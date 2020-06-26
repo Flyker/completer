@@ -14,10 +14,44 @@ body {
   font-size: 12px;
 }
 
-.excel {
-  position: relative;
+.app_block {
   color: #000;
-  height: 100%;
-  max-width: 100%;
-  font-size: .8rem;
+  font-size: 32px;
+  padding: 128px 0;
+  margin: 0;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  & .app__text {
+    min-width: 25vw;
+    width: 50vw;
+    outline: none;
+    border: 1px solid #c5c5c5;
+
+    &:focus, &:hover {
+      border: 1px solid #1a73e8;
+    }
+  }
+
+  & .app_text-result {
+    position: relative;
+    margin-top: 3px;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    min-width: 25vw;
+    width: 50vw;
+    @include clear-list();
+  }
+
+  & .app_result-item {
+    padding: 4px;
+    border-bottom: 1px solid $border-color;
+
+    &:last-child {
+      border-bottom-style: none;
+    }
+  }
 }
